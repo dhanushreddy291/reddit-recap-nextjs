@@ -5,6 +5,7 @@ import { Slider } from "@/components/ui/slider"
 import { Button } from "@/components/ui/button"
 import { Play, Pause, SkipBack, SkipForward, Volume2, FastForward } from 'lucide-react'
 import { AudioItem } from "@/types/audio"
+import Image from 'next/image'
 
 interface AudioPlayerProps {
   currentTrack: AudioItem | null
@@ -80,10 +81,12 @@ export function AudioPlayer({ currentTrack, onPlayPause, onNext, onPrevious, isP
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t p-4 bg-pink-100">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <img
+          <Image
             src={imageUrl}
             alt="Now playing"
             className="w-12 h-12 rounded"
+            width={48}
+            height={48}
           />
           <div>
             <h4 className="font-medium">{currentTrack.title}</h4>

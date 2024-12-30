@@ -13,18 +13,17 @@ export async function GET() {
     console.log(response);
     response.forEach((row) => {
 
-        let title = row.url.includes("reddit_news_summary_singularity") ? "Singularity" : row.url.includes("reddit_news_summary_homeautomation") ? "Home Automation" : "LocalLLaMA";
-        let created = new Date(row.createdAt).toLocaleString();
+        const title = row.url.includes("reddit_news_summary_singularity") ? "Singularity" : row.url.includes("reddit_news_summary_homeautomation") ? "Home Automation" : "LocalLLaMA";
 
         // Calculate 2 hours before
-        let twoHoursBeforeCreated = new Date(row.createdAt);
+        const twoHoursBeforeCreated = new Date(row.createdAt);
         twoHoursBeforeCreated.setHours(twoHoursBeforeCreated.getHours() - 2);
 
-        let startTime = twoHoursBeforeCreated.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        let endTime = new Date(row.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const startTime = twoHoursBeforeCreated.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const endTime = new Date(row.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
         const completeTitle = `${title} summary from ${startTime} to ${endTime}`;
-        // @ts-ignore
+        // @ts-expect-error - title is not a column in the table
         row.title = completeTitle;
     })
     return Response.json(response)
