@@ -51,7 +51,8 @@ export default function Home() {
   return (
     <div className="min-h-screen flex">
       <main className="flex-1 p-8">
-        <h1 className="text-4xl font-bold mb-8">Today&apos;s Top Stories</h1>
+        <h1 className="text-4xl font-bold">Reddit Recap</h1>
+        <h4 className='ml-0.5 mb-8'>Listen to summary of reddit posts from Singularity, Home Automation and LocalLLaMA, generated every 2 hours by AI</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {audioItems.map((audio) => (
             <AudioCard
