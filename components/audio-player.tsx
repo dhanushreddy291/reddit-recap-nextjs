@@ -69,7 +69,7 @@ export function AudioPlayer({ currentTrack, onPlayPause, onNext, onPrevious, isP
 
   if (!currentTrack) return null
 
-  const imageUrl = currentTrack.title.includes("Singularity") ? "/Singularity.png" : currentTrack.title.includes("Home Automation") ? "/HomeAutomation.png" : "/LocalLLaMA.png"
+  const imageUrl = currentTrack.title.includes("Singularity") ? "/Singularity.png" : currentTrack.title.includes("Home Automation") ? "/HomeAutomation.png" : "/LocalLlama.png"
 
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60)

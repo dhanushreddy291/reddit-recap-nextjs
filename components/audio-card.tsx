@@ -12,7 +12,7 @@ interface AudioCardProps {
 }
 
 export function AudioCard({ audio, onPlay, isActive }: AudioCardProps) {
-  const imageUrl = audio.title.includes("Singularity") ? "/Singularity.png" : audio.title.includes("Home Automation") ? "/HomeAutomation.png" : "/LocalLLaMA.png";
+  const imageUrl = audio.title.includes("Singularity") ? "/Singularity.png" : audio.title.includes("Home Automation") ? "/HomeAutomation.png" : "/LocalLlama.png";
   return (
     <Card className={`relative overflow-hidden transition-all hover:bg-accent ${isActive ? 'bg-accent' : ''}`}>
       <CardContent className="p-6">
