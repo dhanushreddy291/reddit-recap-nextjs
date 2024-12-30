@@ -1,4 +1,5 @@
 export const runtime = "edge";
+export const revalidate = 0;
 
 import { summaries } from '@/drizzle/schema';
 import { neon } from '@neondatabase/serverless';
