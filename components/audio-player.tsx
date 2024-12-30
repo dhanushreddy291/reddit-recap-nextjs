@@ -87,6 +87,7 @@ export function AudioPlayer({ currentTrack, onPlayPause, onNext, onPrevious, isP
             className="w-12 h-12 rounded"
             width={48}
             height={48}
+            quality={100}
           />
           <div>
             <h4 className="font-medium">{currentTrack.title}</h4>

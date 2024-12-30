@@ -23,6 +23,7 @@ export function AudioCard({ audio, onPlay, isActive }: AudioCardProps) {
             className="w-full h-full object-cover rounded-lg"
             width={400}
             height={400}
+            quality={100}
           />
         </div>
         <div className="flex items-start justify-between">
