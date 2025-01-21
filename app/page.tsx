@@ -52,7 +52,7 @@ export default function Home() {
     <div className="min-h-screen flex">
       <main className="flex-1 p-8">
         <h1 className="text-4xl font-bold">Reddit Recap</h1>
-        <h4 className='ml-0.5 mb-8'>Listen to summary of reddit posts from Singularity, Home Automation and LocalLLaMA, generated every 2 hours by AI (*the script is paused for now as I do not have sufficient BrightData credits to keep it running, you can find complete code here: https://dev.to/dhanushreddy29/reddit-recap-3j6d)</h4>
+        <h4 className='ml-0.5 mb-8'>Listen to summary of reddit posts from Singularity, Home Automation and LocalLLaMA, generated every 2 hours by AI (*the script is currently paused due to insufficient BrightData credits. You can explore the complete code <a href="https://dev.to/dhanushreddy29/reddit-recap-3j6d" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">here</a>)</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {audioItems.map((audio) => (
             <AudioCard
